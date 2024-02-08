@@ -1,7 +1,7 @@
 pipeline {
     agent {
         node{
-            lable "AGENT-1"
+            lable 'AGENT-1'
         }
     }
 

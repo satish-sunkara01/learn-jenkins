@@ -7,6 +7,10 @@ pipeline {
     environment { 
         greetings = "Hi I am learning jenkins pipeline"
     }
+    options {
+        timeout(time: 1, unit: 'HOURS')
+        disableConcurrentBuilds()
+    }
 
     stages {
         stage('Build') {

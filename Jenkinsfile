@@ -22,9 +22,7 @@ pipeline {
             }
         }
     }
-}
-
- post { 
+    post { 
         always { 
             echo 'I will always say Hello again!'
         }
@@ -35,3 +33,5 @@ pipeline {
             echo 'Hey Script us success!'
         }
     }
+}
+

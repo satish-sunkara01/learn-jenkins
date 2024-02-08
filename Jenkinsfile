@@ -4,11 +4,17 @@ pipeline {
             label 'AGENT-1'
         }
     }
+    environment { 
+        greetings = "Hi I am learning jenkins pipeline"
+    }
 
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
+                sh """
+                    echo "Here I am writing shell script"
+                    env
+                """
             }
         }
         stage('Test') {
@@ -30,7 +36,7 @@ pipeline {
             echo 'Script is failed'
         }
         success { 
-            echo 'Hey Script us success!'
+            echo 'Hey Script is success!'
         }
     }
 }

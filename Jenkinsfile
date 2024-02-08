@@ -45,7 +45,7 @@ pipeline {
         stage('Check Params'){
             steps{
                 sh """
-                    echo "Hello ${params.PERSON}"
+                    echo  "Hello ${params.PERSON}"
 
                     echo "Biography: ${params.BIOGRAPHY}"
 
